@@ -1,0 +1,26 @@
+	area program1,code, readonly
+entry
+	adr r0, q
+	ldr r1, [r0], #4
+	ldrb r2, [r0]
+	ldr r3, [r0,#4]!
+	ldrh r4,[r0]
+	ldr r5, =r
+	str r0, [r5],#4
+	strb r1, [r5]
+	strh r2,[r5,#4]!
+	mov r6, #8
+	strb r1, [r5], r6
+	strb r2, [r5,r6]
+	str r3, [r5]
+	
+s 	b	s
+q	dcb "Manipal"
+p	dcd 0xABCDEF78
+	
+	area memory,data, readwrite
+valu dcd 0x11222344
+r	dcd 0xabbccdde
+t dcd 0x11223344
+res space 10
+	end
