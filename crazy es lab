@@ -24,4 +24,4 @@ r	dcd 0xabbccdde
 t dcd 0x11223344
 res space 10
 	end
-gggg
+ggggm,nb 
